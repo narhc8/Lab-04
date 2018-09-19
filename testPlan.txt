@@ -1,0 +1,19 @@
+1.) Test 1
+Input Value: 0
+Expected outcome: Array with size 0
+
+2.) Test 2
+Input Value: 5
+Expected outcome: Array with size 5
+
+3.) Test 3
+Input Value: 
+Expected outcome: Error no size was specified
+
+4.) Test 4
+Input Value: 2
+Expected outcome: Array with size 2
+
+5.) Test 5
+Input Value: 1
+Expected outcome: Array with size 1
