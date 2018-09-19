@@ -1,32 +1,54 @@
-import bridges.connect.Bridges;
-import bridges.base.Array;
-import bridges.base.Element;
+import java.util.Arrays;
+import java.util.Collections;
 
-public class Setup {
-	public static void main(String[] args) throws Exception {
+public class Lab4 {
 
-	    /* Initialize a Bridges connection with your credentials */
-	    /* TODO: plug your own BRIDGES credentials */
-	    Bridges bridges = new Bridges(0, "YOUR_USER_ID", "YOUR_API_KEY");
+    public static void main(String[] args) throws Exception {
 
-	    /* Set an assignment title */
-	    bridges.setTitle("Array Example");
+        Integer[] intArrayTest1 = new Integer[] {
+                2, 9, 1, 5
+        };
 
-	    /* Set up the array dimensions, allocate an Array of Elements */
-	    /* TODO: Make an array of size 10 */
-	    int arraySize = 2;
-	    Array<Integer> arr = new Array<Integer> (arraySize);
-	    
-	    /* Populate the array with integers */
-	    /* TODO: Make the array store square numbers*/
-	    arr.getElement(0).setValue (0);
-	    /* set the value as a Label */
-	    arr.getElement(0).setLabel(String.valueOf(0));
-	    
-	    /* Tell BRIDGES which data structure to visualize */
-	    bridges.setDataStructure(arr);
+        Integer[] intArrayTest2 = new Integer[] {
+                null
+        };
 
-	    /* Visualize the Array */
-	    bridges.visualize();
-	}
+        Integer[] intArrayTest3 = new Integer[] {
+                2, -1, 1, 5
+        };
+
+        Integer[] intArrayTest4 = new Integer[] {
+                5, 4, 3, 2, 1
+        };
+
+        Integer[] intArrayTest5 = new Integer[] {
+                0, 0, 0, 0
+        };
+
+        sortArray(intArrayTest1);
+        sortArray(intArrayTest2);
+        sortArray(intArrayTest3);
+        sortArray(intArrayTest4);
+        sortArray(intArrayTest5);
+
+
+    }
+
+    public static Integer[] sortArray(Integer[] intArray){
+
+
+        if(intArray != null){
+
+            Arrays.sort(intArray, Collections.reverseOrder());
+
+            return intArray;
+        }
+        else {
+            System.out.println("array is null");
+        }
+
+        return intArray;
+
+    }
+
 }
